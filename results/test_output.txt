@@ -1,0 +1,19 @@
+CORRECTNESS TESTS
+  PASS  A15 B7 C6 D6 E5 -> A=00 B=01 C=10 D=110 E=111
+  PASS  A15 B7 C6 D6 E5 -> Shannon-Fano 89 bits, optimal (Huffman) 87 bits
+  PASS  Spec case AAAAABBCCDDEE -> A=00 B=01 C=10 D=110 E=111
+  PASS  Spec case AAAAABBCCDDEE -> Shannon-Fano 30 payload bits, optimal (Huffman) 29, SF >= Huffman
+  PASS  10 equal characters -> 34 bits (6 codes x 3 + 4 codes x 4), equal to optimal
+  PASS  MISSISSIPPI -> I=0 S=10 P=110 M=111 (21 bits)
+  PASS  BANANA -> A=0 N=10 B=11 (9 bits)
+  PASS  ABRACADABRA -> 23 bits
+  PASS  All test trees are prefix-free with Kraft sum = 1
+  PASS  Round trip: A15 B7 C6 D6 E5
+  PASS  Round trip: English sentence
+  PASS  Round trip: all 256 byte values (binary data)
+  PASS  Edge: empty input
+  PASS  Edge: single byte
+  PASS  Edge: one repeated symbol (no code bits stored)
+  PASS  Edge: two symbols
+  PASS  Fibonacci weights (20 symbols) -> depth 19, prefix-free, round trip
+Result: 17 passed, 0 failed
